@@ -78,3 +78,5 @@ Consulta la rama main **únicamente** como ejemplo de implementación final.
 - Wiki del curso [Recursos-isis2603](https://github.com/Uniandes-isis2603/recursos-isis2603/wiki)
 
 - Como desplegar [Back-End con docker](https://misovirtual.virtual.uniandes.edu.co/codelabs/MISW4104_202212_DeployBackDocker/index.html#0)
+
+Se inento agregar el nuevo atributo al api de progress, Y que este se mostrara en author card y se pudiera cambiar desde el form.
