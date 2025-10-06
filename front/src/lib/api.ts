@@ -24,6 +24,7 @@ export type Author = {
   description: string;
   image: string;
   birthDate: string;
+  progress : number ;
 };
 
 export const AuthorsAPI = {

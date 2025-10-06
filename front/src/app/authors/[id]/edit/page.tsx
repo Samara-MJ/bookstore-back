@@ -20,6 +20,10 @@ export default function EditAuthorPage() {
     await updateAuthor(id, author);
     router.push('/authors');
   }
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const valueAsNumber = +e.target.value; 
+  console.log(valueAsNumber);
+};
 
   if (!author) return <p>Cargando…</p>;
 
@@ -32,6 +36,8 @@ export default function EditAuthorPage() {
           onChange={e => setAuthor({ ...author, birthDate: e.target.value })} />
         <input value={author.image} onChange={e => setAuthor({ ...author, image: e.target.value })} />
         <textarea value={author.description} onChange={e => setAuthor({ ...author, description: e.target.value })}></textarea>
+        <input value={author.image} onChange={e => setAuthor({ ...author, image: e.target.value })} />
+        <input value={author.progress} onChange={e => setAuthor({ ...author, progress: e.target.valueAsNumber })}></input>
         <button type="submit">Guardar</button>
       </form>
     </main>

@@ -7,7 +7,7 @@ export default function CreateAuthorPage() {
   const { createAuthor } = useAuthorsContext();
   const router = useRouter();
 
-  const [form, setForm] = useState({ name: '', birthDate: '', description: '', image: '' });
+  const [form, setForm] = useState({ name: '', birthDate: '', description: '', image: '' , progress: 0});
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -27,6 +27,8 @@ export default function CreateAuthorPage() {
           value={form.image} onChange={e => setForm({ ...form, image: e.target.value })} />
         <textarea name="description" placeholder="Descripción"
           value={form.description} onChange={e => setForm({ ...form, description: e.target.value })}></textarea>
+        <input name="progress" type="number" required
+          value={form.progress} onChange={e => setForm({ ...form, progress: e.target.valueAsNumber })} />
         <button type="submit">Crear</button>
       </form>
     </main>

@@ -1,8 +1,11 @@
 'use client';
-import { createContext, useContext } from 'react';
+import { createContext, useContext, useState } from 'react';
 import { useAuthors } from '@/hooks/useAuthors';
+import { Author } from '@/lib/api';
+
 
 const AuthorsCtx = createContext<ReturnType<typeof useAuthors> | null>(null);
+
 
 export function AuthorsProvider({ children }: { children: React.ReactNode }) {
   const value = useAuthors();

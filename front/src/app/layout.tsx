@@ -10,6 +10,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <nav>
             <a href="/authors">Autores</a> | <a href="/crear">Crear</a>
           </nav>
+          {/*Resumen global visible*/}
+          <div>
+      
+          </div>
           {children}
         </AuthorsProvider>
       </body>

@@ -15,7 +15,8 @@ const [form, setForm] = useState<Author>({
 name: initial?.name ?? '',
 description: initial?.description ?? '',
 image: initial?.image ?? '',
-birthDate: initial?.birthDate ?? ''
+birthDate: initial?.birthDate ?? '',
+progress: initial?.progress?? 0
 });
 const [touched, setTouched] = useState<Record<string, boolean>>({});
 const [submitting, setSubmitting] = useState(false);

@@ -4,6 +4,10 @@ import { useAuthorsContext } from '@/context/AuthorsContext';
 export default function AuthorsPage() {
   const { authors, loading, error, deleteAuthor } = useAuthorsContext();
 
+  function setAuthor(arg0: any): void {
+    throw new Error('Function not implemented.');
+  }
+
   return (
     <main style={{ padding: 16 }}>
       <h1>Autores</h1>
@@ -42,6 +46,8 @@ export default function AuthorsPage() {
             <h3 style={{ margin: '4px 0' }}>{a.name}</h3>
             <small>{a.birthDate}</small>
             <p>{a.description}</p>
+            <small>{a.progress}</small>
+              
 
             <div style={{ display: 'flex', gap: 8 }}>
               <a href={`/authors/${a.id}/edit`}>
